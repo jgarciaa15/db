@@ -16,8 +16,8 @@ jobs:
     - name: Conectar a MySQL
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ cualquiera123456.000webhostapp.com }}
-        username: ${{ prueba123456 }}
-        password: ${{ Conprueba1* }}
+        host: ${{ secrets.cualquiera123456.000webhostapp.com }}
+        username: ${{ secrets.prueba123456 }}
+        password: ${{ secrets.Conprueba1* }}
         script: |
           mysql -h localhost -u user -p password -e "USE database_name; INSERT INTO tabla (campo1, campo2, campo3) VALUES ('valor1', 'valor2', 'valor3'),('valor4', 'valor5', 'valor6'),('valor7', 'valor8', 'valor9'),('valor10', 'valor11', 'valor12'),('valor13', 'valor14', 'valor15'),('valor16', 'valor17', 'valor18'),('valor19', 'valor20', 'valor21'),('valor22', 'valor23', 'valor24'),('valor25', 'valor26', 'valor27'),('valor28', 'valor29', 'valor30');"
