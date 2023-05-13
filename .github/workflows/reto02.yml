@@ -1,0 +1,20 @@
+name: Crear archivo CSV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Crear archivo CSV
+      run: |
+        echo "Nombre,Edad,Ciudad" > archivo.csv
+        echo "John,25,New York" >> archivo.csv
+        echo "Lisa,30,Los Angeles" >> archivo.csv
+
+    - name: Imprimir contenido del archivo CSV
+      run: cat archivo.csv
