@@ -1,0 +1,15 @@
+name: Leer archivo CSV
+on:
+  push:
+    branches:
+      - main
+jobs:
+  leer-archivo-csv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+      - name: Leer archivo CSV
+        run: |
+          echo "Contenido del archivo CSV:"
+          cat archivo.csv
